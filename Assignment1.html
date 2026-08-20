@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <style>
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <h1>Assignment 1</h1>
+    <div class="item", id="tea">
+        <h2>Tea 🍵</h2>
+        <p>Price: 450</p>
+        <img src="tea.jpg" alt="Tea" width="200" height="200">
+        <button onclick="buyItem('tea')">Buy</button>
+    </div>
+    <div class="item", id="coffee">
+        <h2>Coffee ☕️</h2>
+        <p>Price: 600</p>
+        <img src="coffee.jpg" alt="Coffee" width="200" height="200">
+        <button onclick="buyItem('coffee')">Buy</button>
+    </div>
+    <div class="item" id="sugar">
+        <h2>Sugar 🍬</h2>
+        <p>Price: 100</p>
+        <img src="sugar.jpg" alt="Sugar" width="200" height="200">
+        <button onclick="buyItem('sugar')">Buy</button>
+    </div>
+    <div class="item" id="pulses">
+        <h2>Pulses 🌾</h2>
+        <p>Price: 200</p>
+        <img src="pulses.jpg" alt="Pulses" width="200" height="200">
+        <button onclick="buyItem('pulses')">Buy</button>
+    </div>
+    <script>
+        const shop={
+            tea: 450,
+            coffee: 600,
+            sugar: 100,
+            pulses: 200
+        };
+        let total=0;
+        function buyItem(item){
+            let quantity=prompt("Enter the quantity of " + item + " you want to buy:");
+            quantity=parseInt(quantity);
+            if(isNaN(quantity) || quantity <= 0){
+                alert("Please enter a valid quantity.");
+                return;
+            }
+            let price=shop[item];
+            let cost=price*quantity;
+            total+=cost;
+            document.getElementById(item).querySelector("p").innerText="Price: "+price+" | Quantity: "+quantity+" | Cost: "+cost;
+        }
+        
+
+    </script>
+</body>
+</html>

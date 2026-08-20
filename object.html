@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        //create an object
+        const student = {
+            name: "John",
+            age: 20,
+            grade: "A",
+            class: "B.tech",
+            fee: 5000
+        };
+        // document.write("Name: " + student.name + "<br>");
+        // document.write("Age: " + student.age + "<br>");
+        // document.write("Grade: " + student.grade + "<br>");
+        // document.write("Class: " + student.class + "<br>");
+        // document.write("Fee: " + student.fee + "<br>");
+        for(let key in student){
+            document.write(key + ": " + student[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

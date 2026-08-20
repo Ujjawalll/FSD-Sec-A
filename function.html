@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // function product(a, b) {
+        //     return a * b;
+        // }
+        // document.write(product(4, 3)+"<br>");
+        // document.write(product(5,6));
+
+        // function abes(){
+        //     document.write("<br> Hello Coder");
+        // }
+        // abes();
+        // abes();
+
+        // const sum = (a,b) => a+b;
+        // document.write("<br>"+sum(2,3));
+
+        const item = () => {
+            let a = prompt("Enter product number:");
+            if(a==1){
+                document.write("You have selected: Car");
+                const car = [
+                    {name: "BMW", price: 50000, capacity: 5},
+                    {name: "Audi", price: 60000, capacity: 5},
+                    {name: "Mercedes", price: 70000, capacity: 5}
+                ];
+                document.write("<br> car details: <br>");
+                for(let i=0; i<car.length; i++){
+                    document.write("Name: " + car[i].name + ", Price: " + car[i].price + ", Capacity: " + car[i].capacity + "<br>");
+                }
+            }
+            else if(a==2){
+                document.write("You have selected: Aeroplane");
+                const aeroplane = [
+                    {name: "Boeing", price: 1000000, capacity: 200},
+                    {name: "Airbus", price: 1200000, capacity: 250},
+                    {name: "Embraer", price: 800000, capacity: 150}
+                ];
+                document.write("<br> Aeroplane details: <br>");
+                for(let i=0; i<aeroplane.length; i++){
+                    document.write("Name: " + aeroplane[i].name + ", Price: " + aeroplane[i].price + ", Capacity: " + aeroplane[i].capacity + "<br>");
+                }
+            }
+            else if(a==3){
+                document.write("You have selected: Helicopter");
+                const helicopter = [
+                    {name: "Bell", price: 200000, capacity: 4},
+                    {name: "Boeing", price: 300000, capacity: 6},
+                    {name: "Airbus", price: 400000, capacity: 8}
+                ];
+                document.write("<br> Helicopter details: <br>");
+                for(let i=0; i<helicopter.length; i++){
+                    document.write("Name: " + helicopter[i].name + ", Price: " + helicopter[i].price + ", Capacity: " + helicopter[i].capacity + "<br>");
+                }
+            }
+            else{
+                document.write("Invalid product number");
+            }
+        }
+        item();
+    </script>
+</body>
+</html>
