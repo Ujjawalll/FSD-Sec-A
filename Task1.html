@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database</title>
+</head>
+<body>
+
+<script>
+    const students = [
+        {
+            name: "Deep",
+            branch: "B.Tech",
+            fee: 5000,
+            rollno: 1
+        },
+        {
+            name: "Rahul",
+            branch: "MCA",
+            fee: 5000,
+            rollno: 22
+        },
+        {
+            name: "Aman",
+            branch: "B.Tech",
+            fee: 5500,
+            rollno: 37
+        },
+        {
+            name: "Tanmay",
+            branch: "M.Tech",
+            fee: 55900,
+            rollno: 97
+        },
+        {
+            name: "Rishi",
+            branch: "MCA",
+            fee: 6500,
+            rollno: 37
+        }
+    ];
+
+    let a = prompt("Enter branch");
+    const stu = students.filter(n => n.branch === a);
+    document.write(JSON.stringify(stu));
+</script>
+
+</body>
+</html>
